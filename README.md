@@ -61,6 +61,11 @@ vagrant ssh agent01.example.com
 sudo puppet agent -t -w=60
 # sign certificate within foreman to complete CSR
 
+# Alternatively you can SSH into theforeman.example.com and do:
+sudo puppet cert list
+# This should list certificates waiting for signing
+sudo puppet cert sign --all
+
 exit
 
 # ssh into second agent node
